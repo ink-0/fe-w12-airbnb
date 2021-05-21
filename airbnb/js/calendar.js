@@ -151,10 +151,11 @@ function getcalendarData(monthNum){
 const datebtn = document.querySelector("#search__box__date");
 const calendar__zone = document.querySelector(".calendar__zone");
 
+const c0h = document.querySelector(".calendar-0");
 const c1h = document.querySelector(".calendar-1");
 const c2h= document.querySelector(".calendar-2");
 const c3h= document.querySelector(".calendar-3");
-const c4h= document.querySelector(".calendar-3");
+// const c4h= document.querySelector(".calendar-4");
 
 
 //날짜 입력시 캘린더 drop 
@@ -164,10 +165,11 @@ datebtn.addEventListener('click',function(e){
 });
 
 //달력 삽입
+c0h.insertAdjacentHTML("beforeend", getcalendarData(-1));
 c1h.insertAdjacentHTML("beforeend", getcalendarData(0));
 c2h.insertAdjacentHTML("beforeend", getcalendarData(1));
 c3h.insertAdjacentHTML("beforeend",getcalendarData(2));
-c3h.insertAdjacentHTML("beforeend",getcalendarData(3));
+// c4h.insertAdjacentHTML("beforeend",getcalendarData(3));
 
 //달력 외 클릭 시 닫힘 
 datebtn.addEventListener('blur',function(e){
@@ -190,7 +192,7 @@ calendar__next_btn.addEventListener('click',function(e){
 //달력 왼쪽 버튼 
 calendar__prev_btn.addEventListener('click',function(e){
   console.log("전 버튼 누름");
-  calendar__box.classList.remove('shiftCalendarRight');  
+  // calendar__box.classList.remove('shiftCalendarRight');  
 
-  // calendar__box.classList.add('shiftCalendarRight');  
+  calendar__box.classList.add('shiftCalendarLeft');  
 })

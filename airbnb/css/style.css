@@ -368,7 +368,7 @@ nav{
     transform: translateX(-391px);
 }
 .calendar__box.shiftCalendarLeft{
-    transform: translateX(calc(100% + 391px));
+    transform: translateX(391px);
 
 }
 
